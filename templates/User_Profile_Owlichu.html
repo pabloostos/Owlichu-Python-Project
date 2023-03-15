@@ -1,0 +1,45 @@
+{% extends "Base_Owlichu.html" %} {% block title %}User Profile for Owlichu{%
+endblock%} {% block main %} <br /><br />
+<div class="container">
+  <div class="row">
+    <div class="col-md"></div>
+    <div class="col-md-8">
+      <div
+        class="card text-info border-info w-100 p-3"
+        style="
+          border-radius: 1.5em;
+          box-shadow: 0 5px 10px rgba(26, 150, 226, 0.606);
+        "
+      >
+        <h1 class="display-4" style="font-weight: bold">Your profile</h1>
+        <hr />
+        <h5 class="card-title text-info">{{profile_info[0]}}</h5>
+        <h5 class="card-title text-info">{{profile_info[1]}}</h5>
+      </div>
+      <hr />
+      {% for word in profile_info[2] %}
+      <div
+        class="card text-dark bg-light border-dark w-100 p-3"
+        style="border-radius: 1.5em; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)"
+      >
+        <div class="card-body text-dark">
+          <ul>
+            <li style="text-align: left">
+              <p><strong>Word: </strong> {{word[1]}}</p>
+            </li>
+            <li style="text-align: left">
+              <p><strong>Definition: </strong> {{word[2]}}</p>
+            </li>
+            <li style="text-align: left">
+              <p><strong>Creation date: </strong> {{word[4]}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col-md"></div>
+  </div>
+</div>
+
+{% endblock%}

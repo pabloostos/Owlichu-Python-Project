@@ -1,0 +1,125 @@
+{% extends "Base_Owlichu.html" %} {% block title %}Index for Owlichu{% endblock
+%} {% block main %}
+<br />
+<br />
+<br />
+<div class="container text-center">
+  <div class="row">
+    <div class="col"></div>
+
+    <div class="col-md-12">
+      <div
+        class="card text-dark bg-light border-dark w-100 p-3"
+        style="border-radius: 1.5em; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)"
+      >
+        <div class="card-body text-dark">
+          <div class="card-body text-dark">
+            <h1 class="display-4" style="font-weight: bold">
+              Owlichu New Word
+            </h1>
+            <hr />
+            <h5 class="card-title text-dark">
+              It is YOUR oportunity to bring purpose to life!
+            </h5>
+            <hr />
+            <form action="/handle_word" method="POST">
+              <div class="row my-3">
+                <input
+                  type="text"
+                  class="form-control form-control-lg text-danger border-danger"
+                  id="owly"
+                  name="owly"
+                  aria-describedby="owlHelp"
+                  placeholder="Your Owly"
+                  style="
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                    font-size: x-large;
+                  "
+                />
+                <div
+                  id="owlyHelp"
+                  class="form-text text-danger font-weight-bold"
+                >
+                  Restriction 3 not met!
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-dark btn-lg"
+                style="box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)"
+              >
+                Submit Owly
+              </button>
+            </form>
+            <br />
+            <hr />
+            <br />
+            <div class="list-group">
+              <a
+                class="list-group-item list-group-item-action border-danger"
+                aria-current="true"
+                style="
+                  border-radius: 0.5em;
+                  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                "
+              >
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1 text-danger">Owlichu restrictions</h5>
+                </div>
+                <hr />
+                <ol>
+                  <li style="text-align: left">
+                    <p class="mb-1">
+                      The input must consist of a single word with no spaces or
+                      <br />
+                      special characters.
+                    </p>
+                  </li>
+                  <li style="text-align: left">
+                    <p class="mb-1">
+                      The word must be in all lowercase letters. <br />
+                    </p>
+                  </li>
+                  <li style="text-align: left">
+                    <p class="mb-1 text-danger font-weight-bold">
+                      The word cannot be longer than 45 characters, which is the
+                      <br />
+                      length of the longest word in the English dictionary,<br />
+                      Pneumonoultramicroscopicsilicovolcanoconiosis. (thought
+                      this <br />
+                      was going to be shorter hahaha)
+                    </p>
+                  </li>
+                  <li style="text-align: left">
+                    <p class="mb-1">
+                      The word must not exist in the current English dictionary.
+                      <br />
+                      Note that while some words may exist in other sources,
+                      such <br />
+                      as technical or specialized dictionaries, they will only
+                      be <br />
+                      checked against the Merriam-Webster's Collegiate API.
+                      <br />
+                    </p>
+                  </li>
+                  <li style="text-align: left">
+                    <p class="mb-1">
+                      A word is considered invalid if it already exists in the
+                      Owlichu <br />
+                      database. In other words, a word can only be added to the
+                      <br />
+                      database if it is unique and does not already exist in the
+                      database.
+                    </p>
+                  </li>
+                </ol>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div>
+{% endblock%}

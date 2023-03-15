@@ -1,0 +1,55 @@
+{% extends "Base_Owlichu.html" %} {% block title %}Index for Owlichu{% endblock
+%} {% block main %}
+<br />
+<br /><br />
+<div class="container text-center">
+  <div class="row">
+    <div class="col"></div>
+
+    <div class="col-md-12">
+      <div
+        class="card text-dark bg-light border-dark w-100 p-3"
+        style="border-radius: 1.5em; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)"
+      >
+        <div class="card-body text-dark">
+          <div class="card-body text-dark">
+            <h1 class="display-4" style="font-weight: bold">
+              Definition for owly
+            </h1>
+            <hr />
+            <h5 class="card-title text-dark">Give YOUR word a new meaning!</h5>
+            <hr />
+            <form action="/handle_definition" method="POST">
+              <div class="row my-3">
+                <textarea
+                  class="form-control form-control-lg text-danger border-danger"
+                  id="owly"
+                  name="owly"
+                  rows="6"
+                  placeholder="This word not only does not exist, this is a word invented by a beatiful mind. A mind so volatile, capable of giving birth to beatiful word and giving it a purpose in this life: Bringing more meaning to our lifes."
+                ></textarea>
+                <div
+                  id="owlyHelp"
+                  class="form-text text-danger font-weight-bold"
+                >
+                  Definition can only have letters no weird characters, commas
+                  or punctuation! (i.e %, $, "", ()... are not allowed)
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-dark btn-lg"
+                style="box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)"
+              >
+                Submit Owly Definition
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

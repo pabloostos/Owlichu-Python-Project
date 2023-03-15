@@ -1,0 +1,63 @@
+{% extends "Base_Owlichu.html" %} {% block title %}Identification page for
+Owlichu{% endblock%} {% block main %}
+<br />
+
+<br />
+<br />
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-sm-6">
+          <div
+            class="card text-dark bg-light border-dark w-150 h-100"
+            style="
+              border-radius: 1.5em;
+              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            "
+          >
+            <div class="card-body">
+              <h1 class="card-title">Login</h1>
+              <h3 class="card-text">Already have an account?</h3>
+              <br />
+              <hr />
+              <br />
+              <a
+                href="http://127.0.0.1:8080/login"
+                class="btn btn-primary btn-dark btn-lg"
+                >Take me to Login</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div
+            class="card text-dark bg-light border-dark w-150 h-100"
+            style="
+              border-radius: 1.5em;
+              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            "
+          >
+            <div class="card-body">
+              <h1 class="card-title">Register</h1>
+              <h3 class="card-text">Don't have an account?</h3>
+              <br />
+              <hr />
+              <br />
+              <a
+                href="http://127.0.0.1:8080/registration"
+                class="btn btn-primary btn-dark btn-lg"
+                >Take me to Register</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
+{% endblock %}

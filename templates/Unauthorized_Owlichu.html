@@ -1,0 +1,46 @@
+{% extends "Base_Owlichu.html" %} {% block title %}Login for Owlichu{%
+endblock%} {% block main %} <br /><br />
+<div class="container">
+  <div class="row">
+    <div class="col-md"></div>
+    <div class="col-md-8">
+      <div
+        class="card text-danger border-danger w-100 p-3"
+        style="
+          border-radius: 1.5em;
+          box-shadow: 0 5px 10px rgba(255, 2, 2, 0.606);
+        "
+      >
+        <h1 class="display-4" style="font-weight: bold">
+          Access to Owlichu denied
+        </h1>
+        <hr />
+        <h5 class="card-title text-danger">
+          Username or password might be incorrect!
+        </h5>
+
+        <div class="col-sm-1"></div>
+        <div class="col-sm-12">
+          <a
+            type="button"
+            class="btn btn-danger btn-lg"
+            href="http://127.0.0.1:8080/login"
+          >
+            Return to Login
+          </a>
+          <a
+            type="button"
+            class="btn btn-danger btn-lg"
+            href="http://127.0.0.1:8080/registration"
+          >
+            Let's Register
+          </a>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+    <div class="col-md"></div>
+  </div>
+</div>
+
+{% endblock%}
